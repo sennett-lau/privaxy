@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "PrivaXy",
+  "version": "1.0",
+  "description": "Hide them, and keep them private.",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://web.telegram.org/*"
+      ],
+      "css": [
+        "style/telegram.css"
+      ],
+      "js": [
+        "scripts/telegram.js"
+      ]
+    }
+  ]
+}
