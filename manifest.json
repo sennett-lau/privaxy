@@ -18,5 +18,8 @@
         "scripts/telegram.js"
       ]
     }
-  ]
+  ],
+  "icons": {
+    "128": "icons/128.png"
+  }
 }
