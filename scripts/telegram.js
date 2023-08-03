@@ -4,6 +4,9 @@ blurOverlay.classList.add("blur-overlay")
 const chatBoxBlurOverlay = blurOverlay.cloneNode(true)
 chatBoxBlurOverlay.classList.add("chat-box-blur-overlay")
 
+const MessageBlurOverlay = blurOverlay.cloneNode(true)
+MessageBlurOverlay.classList.add("message-blur-overlay")
+
 const addChatBoxBlurOverlay = () => {
   const blurOverlayClass = '.chat-box-blur-overlay'
 
@@ -30,6 +33,23 @@ const addChatBoxBlurOverlay = () => {
   }
 }
 
+const inChatBlurOverlay = () => {
+  const chatSection = document.querySelector(".chat.tabs-tab.active")
+
+  if (chatSection) {
+    const message = chatSection.querySelectorAll(".message")
+
+    for (let i = 0; i < message.length; i++) {
+      const hasBlurOverlay = message[i].querySelector(".message-blur-overlay")
+
+      if (!hasBlurOverlay) {
+        message[i].appendChild(MessageBlurOverlay.cloneNode(true))
+      }
+    }
+  }
+}
+
 setInterval(() => {
   addChatBoxBlurOverlay()
+  inChatBlurOverlay()
 }, 200)
