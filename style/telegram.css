@@ -50,3 +50,7 @@
 .bubble-content-wrapper:hover .blur-overlay {
   display: none;
 }
+
+.pinned-container-wrapper:hover .blur-overlay {
+  display: none;
+}

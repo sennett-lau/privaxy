@@ -59,7 +59,21 @@ const inChatBlurOverlay = () => {
   }
 }
 
+const chatInfoBlurOverlay = () => {
+  const pinnedMessage = document.querySelector(".pinned-container-wrapper")
+
+  if (pinnedMessage) {
+    const hasBlurOverlay = pinnedMessage.querySelector(".chat-box-blur-overlay")
+
+    if (!hasBlurOverlay) {
+      pinnedMessage.appendChild(chatBoxBlurOverlay.cloneNode(true))
+      pinnedMessage.style.position = "relative"
+    }
+  }
+}
+
 setInterval(() => {
   addChatBoxBlurOverlay()
   inChatBlurOverlay()
+  chatInfoBlurOverlay()
 }, 200)
