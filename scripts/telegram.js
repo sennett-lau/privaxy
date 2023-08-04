@@ -37,6 +37,16 @@ const inChatBlurOverlay = () => {
   const chatSection = document.querySelector(".chat.tabs-tab.active")
 
   if (chatSection) {
+    const replies = chatSection.querySelectorAll(".reply")
+
+    for (var i = 0; i < replies.length; i++) {
+      const hasBlurOverlay = replies[i].querySelector(".chat-box-blur-overlay")
+
+      if (!hasBlurOverlay) {
+        replies[i].appendChild(chatBoxBlurOverlay.cloneNode(true));
+      }
+    }
+
     const message = chatSection.querySelectorAll(".message")
 
     for (let i = 0; i < message.length; i++) {
