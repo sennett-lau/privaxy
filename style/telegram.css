@@ -54,3 +54,11 @@
 .pinned-container-wrapper:hover .blur-overlay {
   display: none;
 }
+
+.person .avatar-photo {
+  filter: blur(3px);
+}
+
+.person:hover .avatar-photo {
+  filter: none;
+}
