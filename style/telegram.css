@@ -47,8 +47,20 @@
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 56px) calc(100% - 18px), calc(100% - 56px) 100%, 0 100%);
 }
 
+.media-photo, .media-sticker {
+  filter: blur(4px);
+}
+
 .bubble-content-wrapper:hover .blur-overlay {
   display: none;
+}
+
+.bubble-content-wrapper:hover .media-photo {
+  filter: none;
+}
+
+.bubble-content-wrapper:hover .media-sticker {
+  filter: none;
 }
 
 .pinned-container-wrapper:hover .blur-overlay {
@@ -56,7 +68,7 @@
 }
 
 .person .avatar-photo {
-  filter: blur(3px);
+  filter: blur(4px);
 }
 
 .person:hover .avatar-photo {
