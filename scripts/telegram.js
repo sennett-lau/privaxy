@@ -7,6 +7,9 @@ chatBoxBlurOverlay.classList.add("chat-box-blur-overlay")
 const MessageBlurOverlay = blurOverlay.cloneNode(true)
 MessageBlurOverlay.classList.add("message-blur-overlay")
 
+const mediaAttachmentBlurOverlay = blurOverlay.cloneNode(true)
+mediaAttachmentBlurOverlay.classList.add("media-attachment-blur-overlay")
+
 const addChatBoxBlurOverlay = () => {
   const blurOverlayClass = '.chat-box-blur-overlay'
 
@@ -54,6 +57,16 @@ const inChatBlurOverlay = () => {
 
       if (!hasBlurOverlay) {
         message[i].appendChild(MessageBlurOverlay.cloneNode(true))
+      }
+    }
+
+    const mediaAttachments = chatSection.querySelectorAll(".attachment.media-sticker-wrapper")
+
+    for (let i = 0; i < mediaAttachments.length; i++) {
+      const hasBlurOverlay = mediaAttachments[i].querySelector(".media-attachment-blur-overlay")
+
+      if (!hasBlurOverlay) {
+        mediaAttachments[i].appendChild(mediaAttachmentBlurOverlay.cloneNode(true))
       }
     }
   }

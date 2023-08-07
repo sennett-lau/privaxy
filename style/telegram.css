@@ -47,6 +47,15 @@
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 56px) calc(100% - 18px), calc(100% - 56px) 100%, 0 100%);
 }
 
+.media-attachment-blur-overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 18px);
+  border-radius: 17px;
+  z-index: 1;
+}
+
 .media-photo, .media-sticker {
   filter: blur(4px);
 }
