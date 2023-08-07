@@ -62,3 +62,9 @@
 .person:hover .avatar-photo {
   filter: none;
 }
+
+.person:hover .blur-overlay {
+  display: none;
+}
+
+

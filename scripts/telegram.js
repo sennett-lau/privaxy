@@ -60,14 +60,19 @@ const inChatBlurOverlay = () => {
 }
 
 const chatInfoBlurOverlay = () => {
-  const pinnedMessage = document.querySelector(".pinned-container-wrapper")
+  const targets = [
+    document.querySelector(".pinned-container-wrapper"),
+    document.querySelector(".person .user-title .peer-title")
+  ]
 
-  if (pinnedMessage) {
-    const hasBlurOverlay = pinnedMessage.querySelector(".chat-box-blur-overlay")
+  for (let i = 0; i < targets.length; i++) {
+    if (targets[i] === null || targets[i] === undefined) continue
+
+    const hasBlurOverlay = targets[i].querySelector(".chat-box-blur-overlay")
 
     if (!hasBlurOverlay) {
-      pinnedMessage.appendChild(chatBoxBlurOverlay.cloneNode(true))
-      pinnedMessage.style.position = "relative"
+      targets[i].appendChild(chatBoxBlurOverlay.cloneNode(true))
+      targets[i].style.position = "relative"
     }
   }
 }
