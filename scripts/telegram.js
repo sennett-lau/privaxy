@@ -40,6 +40,19 @@ const inChatBlurOverlay = () => {
   const chatSection = document.querySelector(".chat.tabs-tab.active")
 
   if (chatSection) {
+    const chatTitle = chatSection.querySelectorAll(".bubble-content .peer-title")
+
+    if (chatTitle) {
+      for (let i = 0; i < chatTitle.length; i++) {
+        const hasBlurOverlay = chatTitle[i].querySelector(".common-blur-overlay")
+
+        if (!hasBlurOverlay) {
+          chatTitle[i].appendChild(commonBlurOverlay.cloneNode(true));
+          chatTitle[i].style.position = "relative"
+        }
+      }
+    }
+
     const replies = chatSection.querySelectorAll(".reply")
 
     for (var i = 0; i < replies.length; i++) {

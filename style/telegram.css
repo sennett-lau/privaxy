@@ -51,6 +51,14 @@
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 56px) calc(100% - 18px), calc(100% - 56px) 100%, 0 100%);
 }
 
+body .bubble-content .name {
+  padding: 6px 6px 0;
+}
+
+.bubble-content .peer-title {
+  padding: 4px;
+}
+
 .media-attachment-blur-overlay {
   top: 0;
   left: 0;
@@ -64,6 +72,10 @@
   filter: blur(4px);
 }
 
+.bubbles-group .avatar-photo {
+  filter: blur(4px);
+}
+
 .bubble-content-wrapper:hover .blur-overlay {
   display: none;
 }
@@ -73,6 +85,10 @@
 }
 
 .bubble-content-wrapper:hover .media-sticker {
+  filter: none;
+}
+
+.bubbles-group:hover .avatar-photo {
   filter: none;
 }
 
