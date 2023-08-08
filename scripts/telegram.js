@@ -1,17 +1,17 @@
 const blurOverlay = document.createElement("div")
 blurOverlay.classList.add("blur-overlay")
 
-const chatBoxBlurOverlay = blurOverlay.cloneNode(true)
-chatBoxBlurOverlay.classList.add("chat-box-blur-overlay")
+const commonBlurOverlay = blurOverlay.cloneNode(true)
+commonBlurOverlay.classList.add("common-blur-overlay")
 
-const MessageBlurOverlay = blurOverlay.cloneNode(true)
-MessageBlurOverlay.classList.add("message-blur-overlay")
+const messageBlurOverlay = blurOverlay.cloneNode(true)
+messageBlurOverlay.classList.add("message-blur-overlay")
 
 const mediaAttachmentBlurOverlay = blurOverlay.cloneNode(true)
 mediaAttachmentBlurOverlay.classList.add("media-attachment-blur-overlay")
 
 const addChatBoxBlurOverlay = () => {
-  const blurOverlayClass = '.chat-box-blur-overlay'
+  const blurOverlayClass = '.common-blur-overlay'
 
   const chatElements = document.querySelectorAll(".chatlist-chat")
 
@@ -30,7 +30,7 @@ const addChatBoxBlurOverlay = () => {
       const hasBlurOverlay = targets[j].querySelector(blurOverlayClass)
 
       if (!hasBlurOverlay) {
-        targets[j].appendChild(chatBoxBlurOverlay.cloneNode(true))
+        targets[j].appendChild(commonBlurOverlay.cloneNode(true))
       }
     }
   }
@@ -43,10 +43,10 @@ const inChatBlurOverlay = () => {
     const replies = chatSection.querySelectorAll(".reply")
 
     for (var i = 0; i < replies.length; i++) {
-      const hasBlurOverlay = replies[i].querySelector(".chat-box-blur-overlay")
+      const hasBlurOverlay = replies[i].querySelector(".common-blur-overlay")
 
       if (!hasBlurOverlay) {
-        replies[i].appendChild(chatBoxBlurOverlay.cloneNode(true));
+        replies[i].appendChild(commonBlurOverlay.cloneNode(true));
       }
     }
 
@@ -56,7 +56,7 @@ const inChatBlurOverlay = () => {
       const hasBlurOverlay = message[i].querySelector(".message-blur-overlay")
 
       if (!hasBlurOverlay) {
-        message[i].appendChild(MessageBlurOverlay.cloneNode(true))
+        message[i].appendChild(messageBlurOverlay.cloneNode(true))
       }
     }
 
@@ -81,10 +81,10 @@ const chatInfoBlurOverlay = () => {
   for (let i = 0; i < targets.length; i++) {
     if (targets[i] === null || targets[i] === undefined) continue
 
-    const hasBlurOverlay = targets[i].querySelector(".chat-box-blur-overlay")
+    const hasBlurOverlay = targets[i].querySelector(".common-blur-overlay")
 
     if (!hasBlurOverlay) {
-      targets[i].appendChild(chatBoxBlurOverlay.cloneNode(true))
+      targets[i].appendChild(commonBlurOverlay.cloneNode(true))
       targets[i].style.position = "relative"
     }
   }

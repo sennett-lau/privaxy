@@ -6,16 +6,16 @@
   transition: opacity 0.2s ease-in-out;
 }
 
-/* For Chat List */
-.chatlist .chatlist-chat {
-  position: relative;
-}
-
-.chat-box-blur-overlay {
+.common-blur-overlay {
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+/* For Chat List */
+.chatlist .chatlist-chat {
+  position: relative;
 }
 
 .chatlist-chat:hover .blur-overlay {
