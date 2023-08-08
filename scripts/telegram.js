@@ -40,6 +40,16 @@ const inChatBlurOverlay = () => {
   const chatSection = document.querySelector(".chat.tabs-tab.active")
 
   if (chatSection) {
+    const replies = chatSection.querySelectorAll(".reply")
+
+    for (var i = 0; i < replies.length; i++) {
+      const hasBlurOverlay = replies[i].querySelector(".common-blur-overlay")
+
+      if (!hasBlurOverlay) {
+        replies[i].appendChild(commonBlurOverlay.cloneNode(true));
+      }
+    }
+    
     const chatTitle = chatSection.querySelectorAll(".bubble-content .peer-title")
 
     if (chatTitle) {
@@ -50,16 +60,6 @@ const inChatBlurOverlay = () => {
           chatTitle[i].appendChild(commonBlurOverlay.cloneNode(true));
           chatTitle[i].style.position = "relative"
         }
-      }
-    }
-
-    const replies = chatSection.querySelectorAll(".reply")
-
-    for (var i = 0; i < replies.length; i++) {
-      const hasBlurOverlay = replies[i].querySelector(".common-blur-overlay")
-
-      if (!hasBlurOverlay) {
-        replies[i].appendChild(commonBlurOverlay.cloneNode(true));
       }
     }
 
