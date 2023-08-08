@@ -71,8 +71,12 @@ body .bubble-content .name {
 
 }
 
-.media-photo, .media-sticker, .bubbles-group .avatar-photo {
+.media-photo, .media-sticker {
   filter: blur(16px);
+}
+
+.bubbles-group .avatar-photo {
+  filter: blur(4px);
 }
 
 .bubble-content-wrapper:hover .blur-overlay {
