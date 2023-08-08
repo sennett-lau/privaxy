@@ -30,6 +30,10 @@
   filter: none;
 }
 
+.dialog-title .peer-title, .dialog-subtitle .row-subtitle, .dialog-title-details .peer-detail {
+  padding: 3px;
+}
+
 /* For In Chat */
 .message-blur-overlay {
   top: 0;
@@ -87,5 +91,14 @@
 .person:hover .blur-overlay {
   display: none;
 }
+
+.person .peer-title, .person .info {
+  padding: 3px;
+}
+
+.person .info {
+  padding-left: 3px;
+}
+
 
 
