@@ -20,5 +20,15 @@ PrivaXy, a Chrome extension designed to enhance your privacy when using Telegram
 After installing PrivaXy, navigate to the Telegram Web client. Your messages and icons will be automatically blurred until you hover over them.
 
 ## Contributing
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+### General Steps
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a pull request
 
 ## License
+This library is licensed under the MIT License. See the [LICENSE](LICENSE.txt) file
