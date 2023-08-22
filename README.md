@@ -6,6 +6,18 @@ PrivaXy, a Chrome extension designed to enhance your privacy when using Telegram
 ## Table of Contents
 
 ## File Structure
+```
+.
+├── icons
+│   └── 128.png
+├── scripts
+│   └── telegram.js
+├── style
+│   └── telegram.css
+├── LICENSE.txt
+├── README.md
+└── manifest.json
+```
 
 ## Installation
 
