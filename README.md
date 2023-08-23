@@ -20,6 +20,10 @@ PrivaXy, a Chrome extension designed to enhance your privacy when using Telegram
 ```
 
 ## Installation
+1. Clone the repository: `git clone https://github.com/yourusername/privaxy.git`
+2. Open Chrome and navigate to `chrome://extensions/`
+3. Enable "Developer mode" and click "Load unpacked."
+4. Select the PrivaXy directory and click "Open."
 
 ## Implementation
 
